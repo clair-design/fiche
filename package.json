@@ -1,0 +1,28 @@
+{
+  "name": "fiche",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": {
+    "fiche": "./bin/index.js"
+  },
+  "dependencies": {
+    "@vue/component-compiler-utils": "^2.0.0",
+    "commander": "^2.16.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "find-npm-prefix": "^1.0.2",
+    "fs-extra": "^6.0.1",
+    "glob": "^7.1.2",
+    "js-yaml": "^3.12.0",
+    "parcel-bundler": "^1.9.4",
+    "parcel-plugin-md2vue": "^1.1.2",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2",
+    "rimraf": "^2.6.2",
+    "vue": "^2.5.16",
+    "vue-meta": "^1.5.0",
+    "vue-router": "^3.0.1",
+    "vue-server-renderer": "^2.5.16"
+  }
+}
