@@ -82,7 +82,7 @@ const validateConfig = data => {
 
     for (let i = 0; i < arr.length; i++) {
       const item = arr[i]
-      assert(isNotEmptyString(item), `\`.documents[${i}]\`: non-null strring required`)
+      assert(isNotEmptyString(item), `\`.${field}[${i}]\`: non-null string required`)
     }
   }
 
