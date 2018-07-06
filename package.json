@@ -1,11 +1,20 @@
 {
   "name": "fiche",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "index.js",
-  "license": "MIT",
   "bin": {
     "fiche": "./bin/index.js"
   },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clair-design/fiche.git"
+  },
+  "author": "<wemlion> angusfu1126@qq.com",
+  "bugs": {
+    "url": "https://github.com/clair-design/fiche/issues"
+  },
+  "homepage": "https://github.com/clair-design/fiche#readme",
   "dependencies": {
     "@vue/component-compiler-utils": "^2.0.0",
     "commander": "^2.16.0",
