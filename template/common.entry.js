@@ -25,7 +25,9 @@ const createApp = () => {
     router,
     render (h) {
       const layout = this.$route.meta.layout || 'default'
-      return h(`layout-${layout}`)
+      return h('div', { attrs: { id: 'app' } }, [
+        h(`layout-${layout}`)
+      ])
     }
   })
   return { app, router }
