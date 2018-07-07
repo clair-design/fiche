@@ -13,6 +13,7 @@ rimraf.sync(resolve(ficheWorkDir, '.development'))
 const bundler = new Bundler(resolve(__dirname, './entry.development.html'), {
   target: 'browser',
   cache: true,
+  cacheDir: resolve(ficheWorkDir, '.cache'),
   outDir: resolve(ficheWorkDir, '.development'),
   watch: true
 })
