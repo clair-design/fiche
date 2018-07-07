@@ -3,7 +3,6 @@
  * adpated from
  * https://github.com/parcel-bundler/parcel/blob/master/src/cli.js
  */
-
 const program = require('commander')
 const version = require('../package.json').version
 
@@ -16,7 +15,12 @@ program
 
 program
   .command('build')
-  .description('render to static generated files...')
+  .description('render to static generated files')
+  .action(bundle)
+
+program
+  .command('clean')
+  .description('clean the working directory `.fiche`')
   .action(bundle)
 
 program
@@ -36,7 +40,13 @@ if (!args[2] || !program.commands.some(c => c.name() === args[2])) {
 program.parse(args)
 
 function bundle (command) {
-  if (command.name() === 'build') {
+  const name = command.name()
+
+  if (name === 'clean') {
+    return require('../').cleanWorkDir()
+  }
+
+  if (name === 'build') {
     process.env.NODE_ENV = 'production'
   } else {
     process.env.NODE_ENV = 'development'

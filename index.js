@@ -93,6 +93,7 @@ const validateConfig = data => {
   return {
     outputDir,
     workingDir,
+    // TODO: watch glob changes and restart
     layouts: r2wd(layouts),
     plugins: r2wd(plugins),
     styles: data.styles.map(r2wd),
@@ -146,4 +147,12 @@ module.exports = function (config) {
     }
   ])
   .catch(console.log)
+}
+
+module.exports.cleanWorkDir = () => {
+  setPrefixEnv().then(() => {
+    require('rimraf').sync(
+      resolve(process.env.NPM_PREFIX, '.fiche')
+    )
+  })
 }
