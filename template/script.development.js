@@ -15,7 +15,8 @@ const bundler = new Bundler(resolve(__dirname, './entry.development.html'), {
   cache: true,
   cacheDir: resolve(ficheWorkDir, '.cache'),
   outDir: resolve(ficheWorkDir, '.development'),
-  watch: true
+  watch: true,
+  sourceMaps: true
 })
 const port = 1234
 bundler.serve(port).then(() => {

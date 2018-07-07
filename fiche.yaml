@@ -1,8 +1,8 @@
-layouts: ./doc/layouts/*.vue
-plugins: ./doc/plugins/*.js
+layouts: ./example/layouts/*.vue
+plugins: ./example/plugins/*.js
 documents:
-  - ./doc/content/**/*.md
+  - ./example/markdown/**/*.md
 styles:
-  - ./doc/assets/css/main.css
+  - ./example/styles/index.css
 
 output: docs
