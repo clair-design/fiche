@@ -32,7 +32,7 @@ program
   })
 
 const args = process.argv
-if (args[2] === '--help' || args[2] === '-h') args[2] = 'help';
+if (args[2] === '--help' || args[2] === '-h') args[2] = 'help'
 if (!args[2] || !program.commands.some(c => c.name() === args[2])) {
   args.splice(2, 0, 'start')
 }
