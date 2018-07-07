@@ -4,7 +4,7 @@ const Bundler = require('parcel-bundler')
 const openInBrowser = require('parcel-bundler/lib/utils/openInBrowser')
 
 const projectBase = process.env.NPM_PREFIX || process.cwd()
-const ficheWorkDir = process.env.ficheWORK_DIR ||
+const ficheWorkDir = process.env.FICHE_WORK_DIR ||
   resolve(projectBase, '.fiche')
 
 rimraf.sync(resolve(projectBase, '.cache'))

@@ -106,8 +106,8 @@ const validateConfig = data => {
 const ensureWorkingDir = config => {
   return ensureDir(config.workingDir)
     .then(() => {
-      process.env.ficheWORK_DIR = config.workingDir
-      process.env.ficheOUTPUT_DIR = config.outputDir
+      process.env.FICHE_WORK_DIR = config.workingDir
+      process.env.FICHE_OUTPUT_DIR = config.outputDir
       return config
     })
 }

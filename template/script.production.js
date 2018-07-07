@@ -8,9 +8,9 @@ const express = require('express')
 const { createRenderer } = require('vue-server-renderer')
 
 const projectBase = process.env.NPM_PREFIX || process.cwd()
-const ficheWorkDir = process.env.ficheWORK_DIR ||
+const ficheWorkDir = process.env.FICHE_WORK_DIR ||
   resolve(projectBase, '.fiche')
-const outputDir = process.env.ficheOUTPUT_DIR ||
+const outputDir = process.env.FICHE_OUTPUT_DIR ||
   resolve(projectBase, 'docs')
 
 rimraf.sync(outputDir)
