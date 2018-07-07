@@ -2,6 +2,7 @@ const { resolve } = require('path')
 const rimraf = require('rimraf')
 const Bundler = require('parcel-bundler')
 const request = require('request-promise')
+const pluginMd2vue = require('parcel-plugin-md2vue')
 const { writeFile, ensureFile } = require('fs-extra')
 
 const express = require('express')
@@ -86,7 +87,7 @@ function bundle ({
   output
 }) {
   const entry = resolve(__dirname, './entry.production.js')
-  return new Bundler(entry, {
+  const bundler = new Bundler(entry, {
     target,
     cache: false,
     outDir: output,
@@ -94,7 +95,11 @@ function bundle ({
     minify: true,
     sourceMaps: false,
     watch: false
-  }).bundle()
+  })
+
+  pluginMd2vue(bundler)
+
+  return bundler.bundle()
 }
 
 function renderHTML (content, injection, entry) {

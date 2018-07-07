@@ -1,6 +1,7 @@
 const { resolve } = require('path')
 const rimraf = require('rimraf')
 const Bundler = require('parcel-bundler')
+const pluginMd2vue = require('parcel-plugin-md2vue')
 const openInBrowser = require('parcel-bundler/lib/utils/openInBrowser')
 
 const projectBase = process.env.NPM_PREFIX || process.cwd()
@@ -18,6 +19,7 @@ const bundler = new Bundler(resolve(__dirname, './entry.development.html'), {
   watch: true,
   sourceMaps: true
 })
+pluginMd2vue(bundler)
 const port = 1234
 bundler.serve(port).then(() => {
   openInBrowser(`http://localhost:${port}`)

@@ -1,6 +1,6 @@
 {
   "name": "fiche",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "index.js",
   "bin": {
     "fiche": "./bin/index.js"
